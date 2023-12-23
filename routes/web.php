@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\TripController;
+use App\Models\SeatAllocation;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/buses',[BusController::class,'index']);
 Route::get('/tip',[TripController::class,'index']);
+Route::get('/seat',[SeatAllocation::class,'index']);
