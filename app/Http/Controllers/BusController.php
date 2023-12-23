@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class BusController extends Controller
 {
     public function index(){
-        $buses = Bus::with('trips')->find(1);
+        $buses = Bus::with('trips')->get();
         // Log::info($buses->trips);
         //dd($buses);
      return $buses;

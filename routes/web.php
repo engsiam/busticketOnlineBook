@@ -1,9 +1,10 @@
 <?php
 
+use App\Models\SeatAllocation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\TripController;
-use App\Models\SeatAllocation;
+use App\Http\Controllers\SeatAllocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,5 @@ Route::get('/', function () {
 
 Route::get('/buses',[BusController::class,'index']);
 Route::get('/tip',[TripController::class,'index']);
-Route::get('/seat',[SeatAllocation::class,'index']);
+Route::get('/seat', [SeatAllocationController::class, 'home']);
+Route::get('/seat/{trip_id}', [SeatAllocationController::class, 'singleId']);
