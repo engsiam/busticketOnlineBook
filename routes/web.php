@@ -22,6 +22,6 @@ Route::get('/', function () {
 });
 
 Route::get('/buses',[BusController::class,'index']);
-Route::get('/tip',[TripController::class,'index']);
+Route::get('/trip',[TripController::class,'index']);
 Route::get('/seat', [SeatAllocationController::class, 'home']);
 Route::get('/seat/{trip_id}', [SeatAllocationController::class, 'singleId']);
